@@ -1,0 +1,7 @@
+/.idea
+/packages
+/builds/build.properties
+/tx.exe
+CHANGELOG
+/docs/execsql.xml
+.DS_Store
