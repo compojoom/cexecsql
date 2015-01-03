@@ -51,6 +51,8 @@ if ($task == 'executesql')
 
 		$rs = $db->execute();
 
+		var_dump($rs);
+
 		// Check String result
 		if (is_string($rs))
 		{
@@ -58,10 +60,14 @@ if ($task == 'executesql')
 		}
 		elseif(is_object($rs))
 		{
-			$erg = var_export($db->loadObjectList(), true);
+			$rs = $db->loadObjectList();
+			$erg = var_export($rs, true);
+			var_dump($rs);
 		}
 		else
 		{
+			echo "Type mysql result";
+			$rs = $db->loadObjectList();
 			$erg = var_export($rs, true);
 		}
 
